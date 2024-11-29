@@ -1,7 +1,6 @@
-## UPFH2O
+# UPFH2O
 
-# CodeLeakDetection.ipynb
-# Integrated Leak Detection and Reparation System
+# Integrated Leak Detection and Reparation System CodeLeakDetection.ipynb
 
 ## Overview
 This project simulates a comprehensive system for detecting water pipeline leaks, adjusting water distribution in real time, and performing predictive maintenance based on historical data. The system integrates:
