@@ -120,7 +120,7 @@ pip install numpy pandas scikit-learn matplotlib
 For queries or issues, contact:
 - **Raul Andrei Hategan**: [raulandrei.hategan01@estudiant.upf.edu](mailto:raulandrei.hategan01@estudiant.upf.edu)
 
-##License
+## License
 This project is submitted as part of the Aigües de Barcelona challenge and is intended for internal use within the scope of the competition. All rights to the project are reserved by the submitting team. The project and its contents are not to be distributed, modified, or used for commercial purposes outside of this challenge without explicit permission from the project team and Aigües de Barcelona.
 
 By submitting this project, the team grants Aigües de Barcelona the right to review, evaluate, and use the project for the purposes of the competition and any subsequent evaluation, but does not transfer ownership or intellectual property rights to any party unless agreed upon in a separate contract.
