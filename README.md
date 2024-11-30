@@ -1,3 +1,7 @@
+#README
+
+
+
 # Real-Time Database Integration and Predictive Maintenance System
 # Integrated Leak Detection and Reparation System CodeLeakDetection.ipynb
 
@@ -96,6 +100,23 @@ The script generates:
 
 - **Leak Detection Logs**: Highlights anomalies and water flow adjustments.
 - **Predictive Maintenance Chart**: Visualizes forecasted maintenance needs.
+
+
+
+# Water Consumption Thresholds and Incentives for Sustainable Use
+# XXXXXXXXXXXXXXXXXXXXXXXX.ipynb
+
+
+
+# Modification of transport on water consumption
+# XXXXXXXXXXXXXXXXXXXXXXXX.ipynb
+
+
+
+# Anomaly Detection and Public Transport Adjustments
+# XXXXXXXXXXXXXXXXXXXXXXXX.ipynb
+
+
 
 ## Contributions
 
