@@ -1,126 +1,111 @@
-# UPFH2O
-
+# Real-Time Database Integration and Predictive Maintenance System
 # Integrated Leak Detection and Reparation System CodeLeakDetection.ipynb
 
 ## Overview
-This project simulates a comprehensive system for detecting water pipeline leaks, adjusting water distribution in real time, and performing predictive maintenance based on historical data. The system integrates:
 
-- Advanced leak detection using sensor data (ground sound, vibration, and temperature).
-- Proportional water distribution adjustments to optimize resource use.
-- Predictive analytics using a linear regression model to forecast maintenance needs.
+This project simulates an advanced system for integrating real-time sensor data, detecting anomalies in water pipelines, and performing predictive maintenance. The system is designed to:
+
+- Integrate real-time data streams for sound, vibration, and temperature sensors.
+- Detect pipeline leaks using anomaly thresholds.
+- Adjust water distribution dynamically in response to detected leaks.
+- Use predictive analytics to forecast maintenance needs and optimize repair schedules.
+
+**Important**: The current implementation uses a simulated dataset. For real-world deployment, you must replace this with a real-time data source.
 
 ## Features
-- **Leak Detection**: Identifies anomalies in sensor data and flags potential leaks.
-- **Dynamic Water Distribution**: Automatically adjusts water flow in affected areas.
-- **Predictive Maintenance**: Uses machine learning to anticipate future maintenance requirements.
+
+- **Real-Time Data Integration**: Simulated database structure to mimic real-time data handling.
+- **Leak Detection**: Identifies anomalies in sensor readings and flags leaks.
+- **Dynamic Water Distribution**: Adjusts water flow based on detected leaks.
+- **Predictive Maintenance**: Forecasts maintenance requirements using a regression model trained on historical data.
 
 ## Prerequisites
+
 - Python 3.8+
 - Required libraries:
   - `numpy`
   - `pandas`
-  - `sklearn`
+  - `scikit-learn`
   - `matplotlib`
 
 Install dependencies using:
+
 ```bash
 pip install numpy pandas scikit-learn matplotlib
 ```
 
 ## File Structure
-- `leak_detection_simulation.py`: Main script to simulate the leak detection and repair system.
-- `sensor_data.csv`: Sample data for sensor readings (ground sound, vibration, temperature).
-- `maintenance_history.csv`: Historical maintenance records for predictive analytics.
-- `README.md`: User manual.
+
+- `realtime_database_integration.py`: Main script to simulate real-time database integration and system functionality.
+- `README.md`: Documentation file (this document).
 
 ## Usage Instructions
-### 1. Running the Simulation
-1. Ensure all required files are in the working directory.
-2. Execute the script:
+
+### 1. Simulating Real-Time Data
+
+1. Run the main script:
    ```bash
-   python leak_detection_simulation.py
+   python realtime_database_integration.py
    ```
-3. The script performs the following:
-   - Simulates sensor data and detects anomalies.
-   - Adjusts water flow dynamically for flagged regions.
-   - Runs predictive maintenance analysis and outputs a timeline for required repairs.
+2. The script generates synthetic sensor data and processes it in a simulated real-time database environment.
+3. Outputs include:
+   - Leak detection summary for each update cycle.
+   - Visualizations for predictive maintenance.
 
-### 2. Input Files
-- **`sensor_data.csv`**:
-  - Columns:
-    - `Region`: Identifier for the region.
-    - `GroundSound`: Measured sound levels.
-    - `Vibration`: Measured vibration levels.
-    - `Temperature`: Measured ground temperature.
-  - Example:
-    ```csv
-    Region,GroundSound,Vibration,Temperature
-    A,20,15,30
-    B,50,45,80
-    C,25,20,40
-    ```
+### 2. Transition to Real-Time Data
 
-- **`maintenance_history.csv`**:
-  - Columns:
-    - `Region`: Identifier for the region.
-    - `LastMaintenance`: Days since last maintenance.
-    - `LeakReports`: Number of reported leaks.
-    - `PipeAge`: Age of the pipeline in years.
-  - Example:
-    ```csv
-    Region,LastMaintenance,LeakReports,PipeAge
-    A,180,2,10
-    B,300,5,15
-    C,90,1,5
-    ```
+To replace the simulated data with real-time inputs:
 
-### 3. Output
-- **Leak Detection**:
-  - Prints a list of regions with potential leaks.
-  - Saves adjusted water flow information to `adjusted_flow.csv`.
+1. **Set up a live data source**:
 
-- **Predictive Maintenance**:
-  - Displays a bar chart of predicted maintenance needs.
-  - Saves predictions to `maintenance_predictions.csv`.
+   - Use APIs, IoT devices, or other data streams to provide real-time sensor readings.
+   - Ensure data format matches the schema used in the script (`sound`, `vibration`, `temperature`).
 
-### 4. Customization
-- Update sensor thresholds in the script to match real-world values:
+2. **Modify the ************************`RealTimeDatabase`************************ class**:
+   Replace the `update` method to fetch data from your live source instead of generating simulated data:
+
+   ```python
+   def update(self, new_data):
+       """Fetch and append live data."""
+       live_data = fetch_live_data_source()  # Replace with your data fetching logic
+       self.data = pd.concat([self.data, live_data], ignore_index=True)
+   ```
+
+3. **Test the integration**:
+
+   - Run the updated script.
+   - Verify that live data is processed correctly for leak detection and water distribution adjustments.
+
+### 3. Customization
+
+- Update thresholds for leak detection:
   ```python
-  SOUND_THRESHOLD = 30
-  VIBRATION_THRESHOLD = 20
-  TEMPERATURE_THRESHOLD = 50
+  SOUND_THRESHOLD = 70
+  VIBRATION_THRESHOLD = 40
+  TEMPERATURE_THRESHOLD = 25
   ```
-
-- Modify regression model parameters for predictive maintenance in the script:
+- Adjust regression model parameters for predictive maintenance:
   ```python
   model = LinearRegression()
   model.fit(X, y)
   ```
 
-### 5. Visualizations
-- The script generates:
-  - **Leak detection logs**: Highlighted anomalies.
-  - **Predictive maintenance chart**: Forecasted maintenance needs based on pipeline conditions.
+### 4. Visualizations
 
-## Best Practices
-- Ensure timely updates to `sensor_data.csv` and `maintenance_history.csv` for accuracy.
-- Regularly retrain the predictive model with updated maintenance records.
-- Fine-tune thresholds and regression parameters to align with environmental changes.
+The script generates:
 
-## Troubleshooting
-- **No anomalies detected**:
-  - Verify `sensor_data.csv` for realistic values.
-  - Adjust anomaly thresholds.
+- **Leak Detection Logs**: Highlights anomalies and water flow adjustments.
+- **Predictive Maintenance Chart**: Visualizes forecasted maintenance needs.
 
-- **Inaccurate maintenance predictions**:
-  - Ensure `maintenance_history.csv` includes diverse and comprehensive data.
-  - Experiment with additional features (e.g., material type, water pressure).
+## Contributions
+
+Contributions to make this project fully functional with real-time data are welcome! If you integrate a live data source or enhance any part of the system, please submit a pull request.
+
+
+## License
+
+This project is open-source and available under the MIT License. This project is submitted as part of the Aigües de Barcelona challenge and is intended for internal use within the scope of the competition. All rights to the project are reserved by the submitting team. The project and its contents are not to be distributed, modified, or used for commercial purposes outside of this challenge without explicit permission from the project team and Aigües de Barcelona.
 
 ## Contact
 For queries or issues, contact:
 - **Raul Andrei Hategan**: [raulandrei.hategan01@estudiant.upf.edu](mailto:raulandrei.hategan01@estudiant.upf.edu)
-
-## License
-This project is submitted as part of the Aigües de Barcelona challenge and is intended for internal use within the scope of the competition. All rights to the project are reserved by the submitting team. The project and its contents are not to be distributed, modified, or used for commercial purposes outside of this challenge without explicit permission from the project team and Aigües de Barcelona.
-
-By submitting this project, the team grants Aigües de Barcelona the right to review, evaluate, and use the project for the purposes of the competition and any subsequent evaluation, but does not transfer ownership or intellectual property rights to any party unless agreed upon in a separate contract.
