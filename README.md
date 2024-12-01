@@ -3,7 +3,7 @@
 
 
 # Real-Time Database Integration and Predictive Maintenance System
-# Integrated Leak Detection and Reparation System CodeLeakDetection.ipynb
+# Integrated Leak Detection and Reparation System CodeLeakDetection.py
 
 ## Overview
 
@@ -49,7 +49,7 @@ pip install numpy pandas scikit-learn matplotlib
 
 1. Run the main script:
    ```bash
-   python realtime_database_integration.py
+   python CodeLeakDetection.py
    ```
 2. The script generates synthetic sensor data and processes it in a simulated real-time database environment.
 3. Outputs include:
