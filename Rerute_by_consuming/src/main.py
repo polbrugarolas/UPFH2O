@@ -1,56 +1,49 @@
 import pandas as pd
-import networkx as nx
 from ast import literal_eval
 import os
-print(os.getcwd())
 
+# Configuración de directorios
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, '../data')
+OUTPUT_DIR = os.path.join(BASE_DIR, '../outputs')
 
 # Cargar datos
-paradas = pd.read_csv('../data/paradas.csv')  # Ahora incluye coordenadas y nombres
-rutas = pd.read_csv('../data/rutas.csv')  # Archivo de rutas
-lluvias = pd.read_csv('../data/lluvias.csv')  # Archivo de lluvias
+paradas = pd.read_csv(os.path.join(DATA_DIR, 'paradas.csv'))  # Incluye coordenadas y nombres de paradas
+rutas = pd.read_csv(os.path.join(DATA_DIR, 'rutas.csv'))  # Archivo de rutas
 
-# Umbral para considerar una parada afectada por lluvia intensa
-umbral_lluvia = 0.7
+# Crear datos ficticios de consumo de agua por barrio
+barrios_consumo = pd.DataFrame({
+    'barrio': ['Barrio A', 'Barrio B', 'Barrio C', 'Barrio D', 'Barrio E'],
+    'consumo_agua': [120, 80, 150, 70, 90]  # En litros/persona/día
+})
 
-# Identificar paradas afectadas
-paradas_afectadas = lluvias[lluvias['intensidad_lluvia'] > umbral_lluvia]['parada_id'].tolist()
-print("Paradas afectadas:", paradas_afectadas)
+# Mapeo de paradas a barrios (ficticio para este ejemplo)
+paradas['barrio'] = ['Barrio A', 'Barrio B', 'Barrio C', 'Barrio A', 'Barrio D']
 
-# Crear grafo de rutas
-grafo = nx.Graph()
+# Priorizar barrios con menor consumo de agua
+barrios_prioritarios = barrios_consumo.sort_values(by='consumo_agua')['barrio'].tolist()
 
-# Añadir conexiones entre paradas originales
-for _, row in rutas.iterrows():
-    paradas_ruta = literal_eval(row['paradas'])
-    for i in range(len(paradas_ruta) - 1):
-        peso = 10 if paradas_ruta[i] in paradas_afectadas or paradas_ruta[i + 1] in paradas_afectadas else 1
-        grafo.add_edge(paradas_ruta[i], paradas_ruta[i + 1], weight=peso)
-
-# Añadir conexiones entre paradas cercanas óptimas
-for _, parada1 in paradas.iterrows():
-    for _, parada2 in paradas.iterrows():
-        if parada1['parada_id'] != parada2['parada_id']:
-            distancia = ((parada1['latitud'] - parada2['latitud'])**2 + (parada1['longitud'] - parada2['longitud'])**2)**0.5
-            if distancia < 0.01 and parada1['parada_id'] not in paradas_afectadas and parada2['parada_id'] not in paradas_afectadas:
-                grafo.add_edge(parada1['parada_id'], parada2['parada_id'], weight=1)
-
-# Recalcular rutas incluyendo paradas óptimas
+# Ajustar rutas
 nuevas_rutas = []
-for _, row in rutas.iterrows():
-    paradas_ruta = literal_eval(row['paradas'])
-    paradas_validas = [p for p in paradas_ruta if p not in paradas_afectadas]
-    if len(paradas_validas) > 1:  # Verifica que haya al menos un nodo inicial y final
-        try:
-            nueva_ruta = nx.shortest_path(grafo, source=paradas_validas[0], target=paradas_validas[-1], weight='weight')
-        except (nx.NetworkXNoPath, nx.NodeNotFound, IndexError):
-            nueva_ruta = paradas_validas
-    else:
-        nueva_ruta = paradas_validas
+for _, ruta in rutas.iterrows():
+    paradas_ids = literal_eval(ruta['paradas'])  # Convertir la lista de IDs
+    paradas_ruta = paradas[paradas['parada_id'].isin(paradas_ids)]
 
-    nuevas_rutas.append({'ruta_id': row['ruta_id'], 'paradas': nueva_ruta})
+    # Filtrar paradas en barrios prioritarios
+    paradas_prioritarias = paradas_ruta[paradas_ruta['barrio'].isin(barrios_prioritarios)]
+    nuevas_rutas.append(paradas_prioritarias['parada_id'].tolist())
 
-# Guardar nuevas rutas
-nuevas_rutas_df = pd.DataFrame(nuevas_rutas)
-nuevas_rutas_df.to_csv('../outputs/rutas_modificadas.csv', index=False)
-print("Nuevas rutas guardadas en '../outputs/rutas_modificadas.csv'")
+# Crear DataFrame con las nuevas rutas
+nuevas_rutas_df = pd.DataFrame({
+    'ruta_id': rutas['ruta_id'],
+    'nuevas_paradas': nuevas_rutas
+})
+
+# Crear directorio de salida si no existe
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# Guardar las nuevas rutas en un archivo
+output_path = os.path.join(OUTPUT_DIR, 'nuevas_rutas.csv')
+nuevas_rutas_df.to_csv(output_path, index=False)
+
+print(f"Nuevas rutas generadas y guardadas en '{output_path}'.")
