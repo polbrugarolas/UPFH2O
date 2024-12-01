@@ -1,6 +1,9 @@
 import pandas as pd
 import networkx as nx
 from ast import literal_eval
+import os
+print(os.getcwd())
+
 
 # Cargar datos
 paradas = pd.read_csv('../data/paradas.csv')  # Ahora incluye coordenadas y nombres
