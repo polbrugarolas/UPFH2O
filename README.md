@@ -15,6 +15,7 @@ This project simulates an advanced system for integrating real-time sensor data,
 - Use predictive analytics to forecast maintenance needs and optimize repair schedules.
 
 **Important**: The current implementation uses a simulated dataset. For real-world deployment, you must replace this with a real-time data source.
+**Note**: The script is optimized to run in less than 1 minute.
 
 ## Features
 
@@ -110,6 +111,7 @@ The script generates:
 This initiative promotes sustainalbe water usage by implementing a consumption threshold that leverages real-time data analysis. The code simulates a program that continuously monitors water usage and determines whether it exceeds the set limit. Users who stay within the threshold are rewarded, incentivizing mindful and efficient water consumption. By aligning technology with sustainability, this system aims to reduce waste, foster environmental stewardship, and encourage equitable water usage practices.
 
 **Important**: The current implementation uses a simulated dataset. For real-world deployment, you must replace this with a real-time data source.
+**Note**: The script is optimized to run in less than 1 minute.
 
 ## Features
 
@@ -177,6 +179,7 @@ The script generates:
 This project focuses on dynamically detecting anomalies such as heavy rainfall to optimize public transport routes. By leveraging real-time data, the system avoids stops affected by floods, recalculates routes, and ensures safe and efficient transport solutions.
 
 **Important**: While some components use real-world data (e.g., bus stop locations and routes), rainfall data is simulated due to limited access to live datasets. The system is designed to easily integrate real-world data.
+**Note**: The script is optimized to run in less than 1 minute.
 
 ## Features
 
