@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4b36ecccbfdf4634fbbd28f3af24b672 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4b36ecccbfdf4634fbbd28f3af24b672" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4b36ecccbfdf4634fbbd28f3af24b672 = L.map(
+                "map_4b36ecccbfdf4634fbbd28f3af24b672",
+                {
+                    center: [41.3851, 2.1734],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_08369ee33895f8acfaf994934be51dff = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_08369ee33895f8acfaf994934be51dff.addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            var circle_marker_31ec119016bbcce3c77851d4de2e31f8 = L.circleMarker(
+                [41.35295315819178, 2.1202783477850047],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_31ec119016bbcce3c77851d4de2e31f8.bindTooltip(
+                `<div>
+                     ☁️ Av Gran Via-Miguel Hernández (ID: 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d69b0888a1dc40ebd8f63dacfe5d9a6e = L.circleMarker(
+                [41.356559130901175, 2.1241569960856697],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_d69b0888a1dc40ebd8f63dacfe5d9a6e.bindTooltip(
+                `<div>
+                     ☂️ Amadeu Torner (ID: 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_de9c3cf54c073bcf528532c03dd86f30 = L.circleMarker(
+                [41.35750380832634, 2.126352780743144],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_de9c3cf54c073bcf528532c03dd86f30.bindTooltip(
+                `<div>
+                     ☂️ Pl. Europa (ID: 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d766f0e7afc167c028ffd87f61ebd83e = L.circleMarker(
+                [41.37139445356944, 2.1321818322279587],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_d766f0e7afc167c028ffd87f61ebd83e.bindTooltip(
+                `<div>
+                     ☁️ Av Gran Via-Física (ID: 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ce240b5a5ae5c902fe4172042b54decf = L.circleMarker(
+                [41.37588724137737, 2.138753005495791],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_ce240b5a5ae5c902fe4172042b54decf.bindTooltip(
+                `<div>
+                     ☁️ Av Gran Via-Bloc I. Cerdà (ID: 5)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_786028902d3706aed994210bbca6b75c = L.circleMarker(
+                [41.36122977122258, 2.130172296085885],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_786028902d3706aed994210bbca6b75c.bindTooltip(
+                `<div>
+                     ☂️ Ildefons Cerdà-Gran Via (ID: 6)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a35d9d0edd02f550d0cfda2230d20e39 = L.circleMarker(
+                [41.36616449091332, 2.137192789586705],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_a35d9d0edd02f550d0cfda2230d20e39.bindTooltip(
+                `<div>
+                     ☁️ Pl Ildefons Cerdà-Gran Via (ID: 7)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f23d3a62494c3104d766e7f6b0a13ecc = L.circleMarker(
+                [41.36803197443847, 2.140591511442294],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_f23d3a62494c3104d766e7f6b0a13ecc.bindTooltip(
+                `<div>
+                     ☂️ La Campana (ID: 8)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a3b3e034affb5e33a7b9202b3c043110 = L.circleMarker(
+                [41.37226777486793, 2.1458109772499343],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_a3b3e034affb5e33a7b9202b3c043110.bindTooltip(
+                `<div>
+                     ☁️ Gran Via-Mandoni (ID: 9)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ddc4ea4ca1d567d838bf5f75e41f8684 = L.circleMarker(
+                [41.3738845936741, 2.1482993270884463],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_ddc4ea4ca1d567d838bf5f75e41f8684.bindTooltip(
+                `<div>
+                     ☁️ Gran Via-Santa Doreta (ID: 10)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6f2013bcde567844b3abb2460792ab88 = L.circleMarker(
+                [41.37497763150812, 2.1497559221158684],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_6f2013bcde567844b3abb2460792ab88.bindTooltip(
+                `<div>
+                     ☁️ Pl. España-FGC (ID: 11)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_69291dd616d3a98019ef1b9ac25d98f7 = L.circleMarker(
+                [41.37568354208587, 2.150211108315383],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_69291dd616d3a98019ef1b9ac25d98f7.bindTooltip(
+                `<div>
+                     ☂️ Pl España-Gran Via (ID: 12)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ab633623de25c29640f633c7a9e7626d = L.circleMarker(
+                [41.37741412897826, 2.152456692315992],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_ab633623de25c29640f633c7a9e7626d.bindTooltip(
+                `<div>
+                     ☁️ Gran Via-Entença (ID: 13)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_749088bb757d276f96e4ee7cbade0144 = L.circleMarker(
+                [41.37871203893015, 2.1540346702623654],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_749088bb757d276f96e4ee7cbade0144.bindTooltip(
+                `<div>
+                     ☂️ Gran Via-Viladomat (ID: 14)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_adb791ab985cbd52e98f61dbaad96b8c = L.circleMarker(
+                [41.38244623197668, 2.15907206167254],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_adb791ab985cbd52e98f61dbaad96b8c.bindTooltip(
+                `<div>
+                     ☁️ Gran Via-Urgell (ID: 15)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_70707a4647cfb93af12d7660eb7ca7cd = L.circleMarker(
+                [41.38461810820108, 2.162002104664656],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_70707a4647cfb93af12d7660eb7ca7cd.bindTooltip(
+                `<div>
+                     ☁️ Gran Via-Muntaner (ID: 16)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f1dde448640e81500c9c6490bbb8177c = L.circleMarker(
+                [41.38587213134915, 2.1635714380905293],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_f1dde448640e81500c9c6490bbb8177c.bindTooltip(
+                `<div>
+                     ☁️ Pl. Universitat (ID: 17)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6ba29c620e2353c4ab6b8586cdabf26d = L.circleMarker(
+                [41.38717035752203, 2.165499144854377],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_6ba29c620e2353c4ab6b8586cdabf26d.bindTooltip(
+                `<div>
+                     ☂️ Gran Via-Balmes (ID: 18)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_33d83d8b5b61aa192a4ef66c53e92c1a = L.circleMarker(
+                [41.38851216880648, 2.167132302433388],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_33d83d8b5b61aa192a4ef66c53e92c1a.bindTooltip(
+                `<div>
+                     ☁️ Gran Via-Pau Claris (ID: 19)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ac29053729cf30826f297192ca955ad2 = L.circleMarker(
+                [41.39321169029649, 2.1733153049906013],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_ac29053729cf30826f297192ca955ad2.bindTooltip(
+                `<div>
+                     ☁️ Gran Via-Llúria V17 (ID: 20)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_15f0b8c00c2c1817b659078e8fc91154 = L.circleMarker(
+                [41.3942474916236, 2.174696035693678],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_15f0b8c00c2c1817b659078e8fc91154.bindTooltip(
+                `<div>
+                     ☁️ Metro Tetuan (ID: 21)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4fb04849cb24dcd2a7d773614136fdc8 = L.circleMarker(
+                [41.39910756981289, 2.181114157776588],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_4fb04849cb24dcd2a7d773614136fdc8.bindTooltip(
+                `<div>
+                     ☂️ Gran Via-Roger de Flor (ID: 22)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5b845d5da71df91986faed7e950d8fe3 = L.circleMarker(
+                [41.401725259945664, 2.184619089732668],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_5b845d5da71df91986faed7e950d8fe3.bindTooltip(
+                `<div>
+                     ☁️ Monumental (ID: 23)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_021d74d13d28b2d2a3382402f7ad4250 = L.circleMarker(
+                [41.40442149350845, 2.1884514958022847],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_021d74d13d28b2d2a3382402f7ad4250.bindTooltip(
+                `<div>
+                     ☂️ Glòries (ID: 24)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_76357b5cbb29360802447353b3dfaefe = L.circleMarker(
+                [41.40670894580087, 2.191410204541572],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_76357b5cbb29360802447353b3dfaefe.bindTooltip(
+                `<div>
+                     ☁️ Gran Via-Bilbao (ID: 25)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e2c64c6213721444956c20737b619979 = L.circleMarker(
+                [41.40845008684207, 2.1938833815842296],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_e2c64c6213721444956c20737b619979.bindTooltip(
+                `<div>
+                     ☁️ Gran Via-Bac de Roda V27 (ID: 26)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fbad902c070028a683326b00bc9f5be4 = L.circleMarker(
+                [41.41064636161151, 2.196720707430741],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_fbad902c070028a683326b00bc9f5be4.bindTooltip(
+                `<div>
+                     ☁️ Gran Via-Selva de Mar (ID: 27)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_31da06f833ccd0e6cebc1dd09323095f = L.circleMarker(
+                [41.41295635288623, 2.199922182025186],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_31da06f833ccd0e6cebc1dd09323095f.bindTooltip(
+                `<div>
+                     ☂️ Gran Via-St. Martí de Provençals (ID: 28)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a20b327dee4f1ddc3255453a0534e061 = L.circleMarker(
+                [41.41452664489815, 2.201894654529546],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_a20b327dee4f1ddc3255453a0534e061.bindTooltip(
+                `<div>
+                     ☁️ Gran Via-Maresme (ID: 29)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b45e5b91c4e2129c5ab1806324bc65d0 = L.circleMarker(
+                [41.42035039395905, 2.2096610783298645],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            circle_marker_b45e5b91c4e2129c5ab1806324bc65d0.bindTooltip(
+                `<div>
+                     ☁️ Metro Besòs (ID: 30)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_19cd17d10ed3a3bec45146b88ed09b24 = L.polyline(
+                [[41.35295315819178, 2.1202783477850047], [41.356559130901175, 2.1241569960856697], [41.35750380832634, 2.126352780743144], [41.36122977122258, 2.130172296085885], [41.36616449091332, 2.137192789586705], [41.36803197443847, 2.140591511442294], [41.37226777486793, 2.1458109772499343], [41.3738845936741, 2.1482993270884463], [41.37497763150812, 2.1497559221158684], [41.37568354208587, 2.150211108315383], [41.37741412897826, 2.152456692315992], [41.37871203893015, 2.1540346702623654], [41.38244623197668, 2.15907206167254]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            poly_line_19cd17d10ed3a3bec45146b88ed09b24.bindTooltip(
+                `<div>
+                     Ruta Original 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_e4ec43baf4661fe7a1a702e5ea9fdf8f = L.polyline(
+                [[41.35295315819178, 2.1202783477850047], [41.356559130901175, 2.1241569960856697], [41.35750380832634, 2.126352780743144], [41.36122977122258, 2.130172296085885], [41.36616449091332, 2.137192789586705], [41.37588724137737, 2.138753005495791], [41.37226777486793, 2.1458109772499343], [41.37741412897826, 2.152456692315992], [41.38244623197668, 2.15907206167254]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_4b36ecccbfdf4634fbbd28f3af24b672);
+        
+    
+            poly_line_e4ec43baf4661fe7a1a702e5ea9fdf8f.bindTooltip(
+                `<div>
+                     Ruta Modificada 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
