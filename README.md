@@ -169,10 +169,6 @@ The script generates:
 - **Threshold Logs**: Highlights users who stay within the threshold.
 - **Summary Reports**: Aggregated data on compliance and reward distribution.
 
-# Modification of transport on water consumption
-# XXXXXXXXXXXXXXXXXXXXXXXX.ipynb
-
-
 
 # Anomaly Detection and Public Transport Adjustments (A.D.P.T.A)
 
