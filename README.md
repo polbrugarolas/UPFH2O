@@ -16,6 +16,8 @@ This project simulates an advanced system for integrating real-time sensor data,
 
 **Important**: The current implementation uses a simulated dataset. For real-world deployment, you must replace this with a real-time data source.
 
+**Note**: The script is optimized to run in less than 1 minute.
+
 ## Features
 
 - **Real-Time Data Integration**: Simulated database structure to mimic real-time data handling.
@@ -111,6 +113,8 @@ This initiative promotes sustainalbe water usage by implementing a consumption t
 
 **Important**: The current implementation uses a simulated dataset. For real-world deployment, you must replace this with a real-time data source.
 
+**Note**: The script is optimized to run in less than 1 minute.
+
 ## Features
 
 - **Real-Time Data Integration**: Simulated database structure to mimic real-time data handling.
@@ -177,6 +181,8 @@ The script generates:
 This project focuses on dynamically detecting anomalies such as heavy rainfall to optimize public transport routes. By leveraging real-time data, the system avoids stops affected by floods, recalculates routes, and ensures safe and efficient transport solutions.
 
 **Important**: While some components use real-world data (e.g., bus stop locations and routes), rainfall data is simulated due to limited access to live datasets. The system is designed to easily integrate real-world data.
+
+**Note**: The script is optimized to run in less than 1 minute.
 
 ## Features
 
